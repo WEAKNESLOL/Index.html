@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semangat Ujiannya</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      perspective: 1000px;
+    }
+
+    .container {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 10s linear infinite;
+    }
+
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+    }
+
+    .front {
+      background-image: url('https://via.placeholder.com/300x300/4CAF50/FFFFFF?text=Semangat+Ujiannya');
+      transform: translateZ(150px);
+    }
+
+    .back {
+      background-image: url('https://via.placeholder.com/300x300/4CAF50/FFFFFF?text=Semangat+Ujiannya');
+      transform: rotateY(180deg) translateZ(150px);
+    }
+
+    .right {
+      background-image: url('https://via.placeholder.com/300x300/4CAF50/FFFFFF?text=Semangat+Ujiannya');
+      transform: rotateY(90deg) translateZ(150px);
+    }
+
+    .left {
+      background-image: url('https://via.placeholder.com/300x300/4CAF50/FFFFFF?text=Semangat+Ujiannya');
+      transform: rotateY(-90deg) translateZ(150px);
+    }
+
+    .top {
+      background-image: url('https://via.placeholder.com/300x300/4CAF50/FFFFFF?text=Semangat+Ujiannya');
+      transform: rotateX(90deg) translateZ(150px);
+    }
+
+    .bottom {
+      background-image: url('https://via.placeholder.com/300x300/4CAF50/FFFFFF?text=Semangat+Ujiannya');
+      transform: rotateX(-90deg) translateZ(150px);
+    }
+
+    @keyframes rotate {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="face front"></div>
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+  </div>
+</body>
+</html>
